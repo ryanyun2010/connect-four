@@ -155,17 +155,19 @@ document.addEventListener("keydown",function(e){
       		y++;
 				}
     	}
-			console.log(y+" "+turn+" "+xh)
-			if(turn===1){
-				transRed.style.display="none"
-				transBlue.style.display="block"
-				transBlue.style.left=0+"px";
-				transBlue.style.top=300-y*50+"px";
-			}else{
-				transBlue.style.display="none"
-				transRed.style.display="block";
-				transRed.style.left=0+"px";
-				transRed.style.top=300-y*50+"px";
+			if(y<7){
+				console.log(y+" "+turn+" "+xh)
+				if(turn===1){
+					transRed.style.display="none"
+					transBlue.style.display="block"
+					transBlue.style.left=0+"px";
+					transBlue.style.top=300-y*50+"px";
+				}else{
+					transBlue.style.display="none"
+					transRed.style.display="block";
+					transRed.style.left=0+"px";
+					transRed.style.top=300-y*50+"px";
+				}
 			}
 			hicol.style.left=xh+"px";
   }
@@ -182,6 +184,7 @@ document.addEventListener("keydown",function(e){
       		y++;
 				}
     	}
+			if(y<7){
 			console.log(y+" "+turn+" "+xh)
 			if(turn===1){
 				transRed.style.display="none"
@@ -193,6 +196,7 @@ document.addEventListener("keydown",function(e){
 				transRed.style.display="block";
 				transRed.style.left=0+"px";
 				transRed.style.top=300-y*50+"px";
+			}
 			}
 			hicol.style.left=xh+"px";
 		}
@@ -213,6 +217,7 @@ document.addEventListener("keydown",function(e){
       		y++;
 				}
     	}
+			if(y<7){
 			console.log(y+" "+turn+" "+xh)
 			if(turn===1){
 				transRed.style.display="none"
@@ -224,6 +229,7 @@ document.addEventListener("keydown",function(e){
 				transRed.style.display="block";
 				transRed.style.left=0+"px";
 				transRed.style.top=300-y*50+"px";
+			}
 			}
 	}
 	// hicol.style.position="absolute";
