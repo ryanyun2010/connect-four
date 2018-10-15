@@ -205,6 +205,26 @@ document.addEventListener("keydown",function(e){
 				turn=1
 			}
 		}
+  		let y=0;
+  		for(let i =0;i<7;i++){
+    		if(board[i][xc]===0){
+     			 break;
+    		}else{
+      		y++;
+				}
+    	}
+			console.log(y+" "+turn+" "+xh)
+			if(turn===1){
+				transRed.style.display="none"
+				transBlue.style.display="block"
+				transBlue.style.left=0+"px";
+				transBlue.style.top=300-y*50+"px";
+			}else{
+				transBlue.style.display="none"
+				transRed.style.display="block";
+				transRed.style.left=0+"px";
+				transRed.style.top=300-y*50+"px";
+			}
 	}
 	// hicol.style.position="absolute";
 	// hicol.style.left="70px";
