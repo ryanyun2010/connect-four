@@ -196,7 +196,7 @@ document.addEventListener("keydown",function(e){
 			}
 			hicol.style.left=xh+"px";
 		}
-	}else if(keycode===40){
+	}else if(keycode===13){
 		if(xc===7){}else{
 			change(xc);
 			if(turn===1){
