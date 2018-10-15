@@ -59,7 +59,7 @@ let tmp=0
 let chktie = function(board){
 	for(let i=0,i<board.lenghth;i++){
 		for(let j=0,j<board[i].length;j++){
-			if(board[i][j]){
+			if(board[i][j] > 0){
 				tmp++;
 				if(tmp===49){
 					return 1;
