@@ -55,6 +55,19 @@ let makeimgslider4=function(){
     slides[3].style.display="block";
   })
 }
+let tmp=0
+let chktie = function(board){
+	for(let i=0,i<board.lenghth;i++){
+		for(let j=0,j<board[i].length;j++){
+			if(board[i][j]){
+				tmp++;
+				if(tmp===49){
+					return 1;
+				}
+			}
+		}
+	}
+}
 var c=id("game");
 var draw=c.getContext("2d");
 draw.moveTo(60,200)
@@ -231,6 +244,9 @@ document.addEventListener("keydown",function(e){
 				transRed.style.top=300-y*50+"px";
 			}
 			}
+		if(chktie()===1){
+			id("p3").style.display="block";	
+		}
 	}
 	// hicol.style.position="absolute";
 	// hicol.style.left="70px";
@@ -341,7 +357,9 @@ let change =function(x){
     num=1;
     winner(y+1,x-1);
     */
+
   board[y][x]=turn;
+	 if(chktie()===1){}else{
   if(turn===1){
      draw.fillStyle = "#00ffff";
     //console.log("work")
@@ -363,5 +381,6 @@ let change =function(x){
   }
    }
   }
+ }
 }
 newBoard();
