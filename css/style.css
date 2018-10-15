@@ -6,6 +6,7 @@
 	top:208px;
 	left:68px;
 	opacity:0.2;
+	z-index:-10000000
 }
 #trans-blue{
 	height:50px;
