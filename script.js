@@ -69,6 +69,10 @@ let chktie = function(board){
 		}
 	}
 }
+let how_to_play=id("howtoplay");
+id("howtob").addEventListener("click",function(){
+ how_to_play.style.display="block";
+})
 var c=id("game");
 var draw=c.getContext("2d");
 draw.moveTo(60,200)
