@@ -124,9 +124,6 @@ function chkWinner(bd_wrong) {
     // Check down-right
     for (r = 0; r < 4; r++){
         for (c = 0; c < 4; c++){
-          if(r===3){
-                console.log("r3 . "+bd[r][c]+":"+bd[r+1][c+1]+":"+bd[r+2][c+2]+":"+bd[r+3][c+3])
-              }
             if (chkLine(bd[r][c], bd[r+1][c+1], bd[r+2][c+2], bd[r+3][c+3])){
              return bd[r][c];
         }
