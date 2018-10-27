@@ -140,10 +140,10 @@ function chkWinner(bd_wrong) {
         for (c = 0; c < 4; c++){
             if (chkLine(bd[r][c], bd[r+1][c+1], bd[r+2][c+2], bd[r+3][c+3])){
 							draw.fillStyle="#ffff00"
-							draw.fillRect(r*60+60,200+c*50,60,50)
-							draw.fillRect((r+1)*60+60,200+(c+1)*50,60,50)
-							draw.fillRect((r+2)*60+60,200+(c+2)*50,60,50)
-							draw.fillRect((r+3)*60+60,200+(c+3)*50,60,50)
+							draw.fillRect(r*60-60,150+c*50,60,50)
+							draw.fillRect((r+1)*60-60,150+(c+1)*50,60,50)
+							draw.fillRect((r+2)*60-60,150+(c+2)*50,60,50)
+							draw.fillRect((r+3)*60-60,150+(c+3)*50,60,50)
 							draw.stroke()
              return bd[r][c];
 
@@ -155,10 +155,10 @@ function chkWinner(bd_wrong) {
         for (c = 0; c < 4; c++){
             if (chkLine(bd[r][c], bd[r-1][c+1], bd[r-2][c+2], bd[r-3][c+3])){
 							draw.fillStyle="#ffff00"
-							draw.fillRect(r*60+60,200+c*50,60,50)
-							draw.fillRect((r-1)*60+60,200+(c+1)*50,60,50)
-							draw.fillRect((r-2)*60+60,200+(c+2)*50,60,50)
-							draw.fillRect((r-3)*60+60,200+(c+3)*50,60,50)
+							draw.fillRect(r*60-60,150+c*50,60,50)
+							draw.fillRect((r-1)*60-60,150+(c+1)*50,60,50)
+							draw.fillRect((r-2)*60-60,150+(c+2)*50,60,50)
+							draw.fillRect((r-3)*60-60,150+(c+3)*50,60,50)
 							draw.stroke()
 							return bd[r][c];
 
