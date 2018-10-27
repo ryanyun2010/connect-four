@@ -155,7 +155,7 @@ function chkWinner(bd_wrong) {
         for (c = 0; c < 4; c++){
             if (chkLine(bd[r][c], bd[r-1][c+1], bd[r-2][c+2], bd[r-3][c+3])){
 							draw.fillStyle="#ffff00"
-							draw.fillRect(r*60-120,350+c*50,60,50)
+							draw.fillRect(r*60-180,350+c*50,60,50)
 							draw.fillRect((r-1)*60-120,350+(c+1)*50,60,50)
 							draw.fillRect((r-2)*60-120,350+(c+2)*50,60,50)
 							draw.fillRect((r-3)*60-120,350+(c+3)*50,60,50)
