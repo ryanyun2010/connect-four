@@ -109,6 +109,13 @@ function chkWinner(bd_wrong) {
     for (r = 0; r < 4; r++){
         for (c = 0; c < 7; c++){
             if (chkLine(bd[r][c], bd[r+1][c], bd[r+2][c], bd[r+3][c])){
+                console.log(r+" "+c);
+								draw.fillStyle="#ffff00"
+							console.log(r+" "+c+":"+(r+1)+" "+c+":"+(r+2)+" "+c+":"+(r+3)+" "+c)
+								draw.fillRect(c*60+60,200+(r*50),60,50)
+								draw.fillRect(c*60+60,200+((r+1)*50),60,50)
+								draw.fillRect(c*60+60,200+((r+2)*50),60,50)
+								draw.fillRect(c*60+60,200+((r+3)*50),60,50)
                 return bd[r][c];
             }
         }
@@ -117,7 +124,14 @@ function chkWinner(bd_wrong) {
     for (r = 0; r < 7; r++){
         for (c = 0; c < 4; c++){
             if (chkLine(bd[r][c], bd[r][c+1], bd[r][c+2], bd[r][c+3])){
+							draw.fillStyle="#ffff00"
+								draw.fillRect(c*60+60,200+r*50,60,50)
+								draw.fillRect((c+1)*60+60,200+r*50,60,50)
+								draw.fillRect((c+2)*60+60,200+r*50,60,50)
+								draw.fillRect((c+3)*60+60,200+r*50,60,50)
+							draw.stroke()
                 return bd[r][c];
+
             }
         }
     }
@@ -125,7 +139,14 @@ function chkWinner(bd_wrong) {
     for (r = 0; r < 4; r++){
         for (c = 0; c < 4; c++){
             if (chkLine(bd[r][c], bd[r+1][c+1], bd[r+2][c+2], bd[r+3][c+3])){
+							draw.fillStyle="#ffff00"
+							draw.fillRect(r*60-60,300+c*50,60,50)
+							draw.fillRect((r+1)*60-60,300+(c+1)*50,60,50)
+							draw.fillRect((r+2)*60-60,300+(c+2)*50,60,50)
+							draw.fillRect((r+3)*60-60,300+(c+3)*50,60,50)
+							draw.stroke()
              return bd[r][c];
+
         }
             }
     }
@@ -133,7 +154,14 @@ function chkWinner(bd_wrong) {
     for (r = 4; r < 7; r++){
         for (c = 0; c < 4; c++){
             if (chkLine(bd[r][c], bd[r-1][c+1], bd[r-2][c+2], bd[r-3][c+3])){
-                return bd[r][c];
+							draw.fillStyle="#ffff00"
+							draw.fillRect(r*60,250+c*50,60,50)
+							draw.fillRect((r-1)*60,250+(c+1)*50,60,50)
+							draw.fillRect((r-2)*60,250+(c+2)*50,60,50)
+							draw.fillRect((r-3)*60,250+(c+3)*50,60,50)
+							draw.stroke()
+							return bd[r][c];
+
             }
         }
     }
